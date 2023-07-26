@@ -25,8 +25,8 @@ const Body = () => {
     <div className="body">
         <div className="search">Search</div>
         <div className="res-container">
-            <RestaurantCard resName="Coco tree" cuisine="Indian" rating="3.4" time="40 minutes"/>
-            <RestaurantCard resName="KFC" cuisine="Fast food" rating="3.4" time="40 minutes"/>
+            <RestaurantCard resData={{resName:"Coco tree", cuisine:"Indian" ,rating:"3.4" ,time:"40 minutes"}}/>
+            <RestaurantCard resData={{resName:"Coco tree", cuisine:"Indian" ,rating:"3.4" ,time:"40 minutes}}/>
             </div>
     </div>
     )
