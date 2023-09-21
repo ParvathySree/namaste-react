@@ -25,15 +25,30 @@
     padding: 10px;
 }
 
-.res-container{
+.res-container,.shimmer-con{
     display: flex;
     flex-wrap: wrap;
+    
+    /* margin:5%; */
 }
 .res-card{
-    width: 200px;
+    width: 184px;
     height:300px;
-    padding:5px;
-    margin: 5px;
+    padding:9px;
+    margin: 9px;
+}
+
+.res-card img{
+    width:180px;
+    height: 180px;
+}
+
+.shimmer-card{
+    width: 184px;
+    height:300px;
+    padding:9px;
+    margin: 9px;
+    background-color: #f0f0f0;
 }
 
 .res-card:hover{
