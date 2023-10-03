@@ -8,7 +8,6 @@ const imageLink = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_aut
 const RestaurantCard = (props) =>{
     const {resData} = props;
     // const { resName, cuisine, rating, time, image } = resData;
-    console.log(resData,"info")
     const { name, avgRating, cloudinaryImageId, cuisines } = resData;
 
 

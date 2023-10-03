@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import {REST_LIST} from '../utils/Constants'
 import RestaurantCard from "./RestCard";
 import Shimmer from "./Shimmer";
@@ -10,7 +11,6 @@ const Body = () => {
     const [filteredRest,setFilteredRest] = useState([])
 
     const filterResto = () => {
-      console.log(restList)
         const filteredResto = restList.filter(resto => (resto.info.avgRating > 4 ))
         setFilteredRest(filteredResto)
     }
@@ -18,6 +18,10 @@ const Body = () => {
     useEffect(()=>{
       fetchData();
     },[])
+
+    useEffect(()=>{
+      setFilteredRest(restList);
+    },[restList])
     
     const fetchData = async() =>{
       const data = await fetch( "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage- enabled=true&page_type=DESKTOP_WEB_LISTING")
@@ -48,7 +52,8 @@ const Body = () => {
       </div>
       <div className="res-container">
           {filteredRest?.map((resto,index)=>
-              <RestaurantCard key={index+resto} resData={resto.info}/>
+              // <RestaurantCard key={resto.info.id} resData={resto.info}/>
+              <Link key={resto.info.id}  to={"/restaurants/" + resto.info.id}><RestaurantCard resData={resto.info}/></Link>
           )}
           </div>
           
