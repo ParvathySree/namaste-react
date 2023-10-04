@@ -8,9 +8,9 @@ const User = (props) => {
         <div className="user-card">
             <h2>{name}</h2>
             <h3>{role}</h3>
-            <p>fCount : {count}</p>
+            {/* <p>fCount : {count}</p>
             <p>fCount1 : {count1}</p>
-            <button onClick = {() => setCount(count+1)}>Click me</button>
+            <button onClick = {() => setCount(count+1)}>Click me</button> */}
         </div>
     )
 }
