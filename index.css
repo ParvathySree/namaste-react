@@ -62,3 +62,8 @@
 .res-logo{
     width: 100%;
 }
+
+.user-card{
+    padding: 8px;
+    border: 1px solid black;
+}
